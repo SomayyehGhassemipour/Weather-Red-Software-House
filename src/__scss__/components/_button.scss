@@ -1,0 +1,21 @@
+@mixin button-basic {
+  border: none;
+  border-radius: var(--border-radius-button);
+  box-shadow: none;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+}
+.button-text {
+  @include button-basic;
+  padding: 0.5em 1.5em;
+}
+.button-contained {
+  @include button-basic;
+}
+.button-outlined {
+  @include button-basic;
+  background-color: var(--palette-grey-100);
+  border: solid 0.1rem;
+  width: 100%;
+}

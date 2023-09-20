@@ -1,0 +1,42 @@
+@use '../base/variables' as *;
+
+.container {
+	display: flex;
+	position: relative;
+	gap: $spacer;
+	padding: $spacer;
+	margin: auto;
+	max-width: 800px;
+	justify-content: center;
+	top: 60px;
+	@media (min-width: 800px) {
+		width: 100%;
+	}
+}
+
+.container-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	gap: 0.5 * $spacer;
+	padding: 0.5 * $spacer;
+}
+
+.container-column {
+	display: flex;
+	flex-direction: column;
+	gap: $spacer;
+	padding: $spacer;
+	margin: auto;
+}
+
+.fixed-position {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	box-shadow: 5px 5px 5px -1px rgba(0, 0, 0, 0.2),
+		0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}

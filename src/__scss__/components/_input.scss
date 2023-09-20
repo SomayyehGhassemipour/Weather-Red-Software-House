@@ -1,0 +1,23 @@
+.field {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
+	gap: 0.5rem;
+	width: 100%;
+
+	p,
+	textarea,
+	input {
+		border: none;
+		background-color: var(--palette-grey-200);
+		padding: 0.5rem;
+		border-radius: var(--border-radius-input);
+		&::placeholder {
+			color: var(--palette-grey-300);
+			font-size: small;
+		}
+		&:focus {
+			border-color: var(--palette-blue-500);
+		}
+	}
+}

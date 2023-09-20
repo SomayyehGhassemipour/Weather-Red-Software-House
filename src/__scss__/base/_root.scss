@@ -1,0 +1,26 @@
+@use './color' as *;
+@use './variables' as *;
+
+:root {
+	@each $color, $palette in $palettes {
+		@each $key, $value in $palette {
+			$keyname: '--palette-' + $color + '-' + $key;
+			#{$keyname}: #{$value};
+		}
+	}
+	@each $radius, $value in $border-radius {
+		$keyname: '--border-radius-' + $radius;
+		#{$keyname}: #{$value};
+	}
+
+	@each $color, $palette in $palettes {
+		@each $key, $value in $palette {
+			.text-#{$color}-#{$key} {
+				color: var(--palette-#{$color}-#{$key});
+			}
+			.bg-#{$color}-#{$key} {
+				background-color: var(--palette-#{$color}-#{$key});
+			}
+		}
+	}
+}

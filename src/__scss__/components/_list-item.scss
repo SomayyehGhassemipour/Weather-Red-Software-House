@@ -1,0 +1,10 @@
+@use "../base/variables" as *;
+
+.list-item {
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--palette-grey-200);
+  padding: $spacer;
+  margin-bottom: 1px;
+}
